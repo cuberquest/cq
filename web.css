@@ -1,0 +1,15 @@
+* { font: 1em Fredoka; }
+
+html { width: 100%; height: 100%; }
+body { width: 100%; min-height: 100%; }
+
+:root {
+  --font-sm: 0.8em;
+  --font-big: 2em;
+}
+
+#top {
+  max-height: 5em;
+  font-size: var(--font-big);
+  margin: 0 1em;
+}
