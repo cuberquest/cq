@@ -4,10 +4,17 @@
   padding: 0;
 }
 
-html, body {
-  width: 100%;
-  min-height: 100%;
+:root {
+  --body-dark: #222;
+  --body-light: #999;
+  --text-dark: gray;
+  --text-light: black;
+  --font-sm: 0.8rem;
+  --font-big: 2rem;
+  --font-large: 3rem;
 }
+
+html, body { width: 100%; min-height: 100%; }
 
 .flex { display: flex!important; }
 .iflex { display: inline-flex!important; }
