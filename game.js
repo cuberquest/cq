@@ -9,7 +9,15 @@ class Game {
   run() {
     this.frame = requestAnimationFrame(this.update);
   }
-  update() {}
+  update() {
+    this.clear();
+  }
+  clear() {
+    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+  }
+  end() {
+    cancelAnimationFrame(this.frame);
+  }
 }
 
 class Player {
@@ -45,6 +53,6 @@ const game = new Game(canvas);
 (function resize() {
   game.canvas.width = innerWidth;
   game.canvas.height = innerHeight;
-  game.run();
+  game.update();
   addEventListener("resize", resize);
 })();
