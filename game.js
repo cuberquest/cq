@@ -46,6 +46,14 @@ class Sound {
   }
 }
 
+if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+  document.body.classList.add("dark");
+}
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+    const newColorScheme = event.matches ? "dark" : "light";
+    document.body.classList.add(newColorScheme);
+});
+
 let canvas = document.body.insertBefore(document.createElement("canvas"), document.getElementById("gs"));
 canvas.id = "game";
 const game = new Game(canvas);
