@@ -29,8 +29,14 @@ body.dark {
   padding: 1rem 1.5rem;
   background: var(--body-light);
   box-shadow: 0 0.25rem 0.5rem #333;
-  top: 0;
+  top: -4.5rem;
   z-index: 1;
+  transition: 0.5s;
+}
+
+#header.stay {
+  top: 0 !important;
+  transition: 1s;
 }
 
 header#header>#banner { align-items: center; height: 100%; }

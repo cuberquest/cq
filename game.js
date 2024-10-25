@@ -1,6 +1,8 @@
-let canvas = document.body.insertBefore(document.createElement("canvas"), document.getElementById("gs"));
+let canvas = document.body.insertBefore(document.createElement("canvas"), document.getElementById("gs")),
+header = document.getElementById("header");
 canvas.id = "game";
 const game = new Game(canvas);
+
 
 addEventListener("keydown", key);
 
@@ -34,3 +36,6 @@ function key(e) {
   game.update();
   addEventListener("resize", resize);
 })();
+
+header.addEventListener("mouseenter", () => header.classList.add("stay"));
+header.addEventListener("mouseleave", () => header.classList.remove("stay"));

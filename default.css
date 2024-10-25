@@ -16,10 +16,10 @@
 
 html, body { width: 100%; min-height: 100%; }
 
-.flex { display: flex!important; }
-.iflex { display: inline-flex!important; }
-.grid { display: grid!important; }
-.igrid { display: inline-grid!important; }
+.flex { display: flex !important; }
+.iflex { display: inline-flex !important; }
+.grid { display: grid !important; }
+.igrid { display: inline-grid !important; }
 
 .fixed { position: fixed; }
 .sticky { position: sticky; }
@@ -27,4 +27,4 @@ html, body { width: 100%; min-height: 100%; }
 
 .no-border { border: none; }
 .circle { border-radius: 50%; }
-[hidden], .hidden { display: none!important; }
+[hidden], .hidden { display: none !important; }
