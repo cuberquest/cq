@@ -46,6 +46,13 @@ body.dark header#header {
   box-shadow: 0 0.25rem 0.5rem #000;
 }
 
+#version {
+  font-size: 1rem;
+  position: relative;
+  top: -0.875rem;
+  left: 6rem;
+}
+
 #game {
   z-index: -1;
 }
