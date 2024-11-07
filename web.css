@@ -1,5 +1,4 @@
 @import url(default.css);
-@import url(//fonts.googleapis.com/css?family=Fredoka);
 * { font: 1em Fredoka; }
 
 html:root {
@@ -52,6 +51,8 @@ body.dark header#header {
   top: -0.875rem;
   left: 6rem;
 }
+
+#header:not(.stay)>#version { display: none; }
 
 #game {
   z-index: -1;
