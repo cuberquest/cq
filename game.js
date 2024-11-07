@@ -3,16 +3,19 @@ header = document.getElementById("header");
 canvas.id = "game";
 const game = new Game(canvas);
 
-
 addEventListener("keydown", key);
 
-if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-  document.body.classList.remove("light");
-  document.body.classList.add("dark");
-} else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
-  document.body.classList.remove("dark");
+function themeUpdate() {
+  if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    document.body.classList.remove("light");
+    document.body.classList.add("dark");
+  } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+    document.body.classList.remove("dark");
+  }
 }
+themeUpdate();
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+  themeUpdate();
   const newColorScheme = e.matches ? "dark" : "light";
   document.body.classList.add(newColorScheme);
 });
