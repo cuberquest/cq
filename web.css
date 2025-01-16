@@ -1,12 +1,28 @@
-@import url(default.css);
-* { font: 1em Fredoka; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font: 1em Fredoka;
+}
 
 html:root {
+  width: 100%;
   height: 100%;
+  min-height: 100%;
   scroll-behavior: smooth;
+
+  --body-dark: #222;
+  --body-light: #fff;
+  --text-dark: #fff;
+  --text-light: black;
+  --font-sm: 12.8px;
+  --font-big: 32px;
+  --font-large: 48px;
 }
 
 body {
+  width: 100%;
+  min-height: 100%;
   overflow: clip;
   background-color: var(--body-light);
   color: var(--text-light);
@@ -17,49 +33,63 @@ body.dark {
   color: var(--text-dark);
 }
 
-::-webkit-scrollbar { width: 0.625rem; background: #161616; border-radius: 0.375rem;}
-::-webkit-scrollbar-thumb { background: #0f0f0f; border-radius: 0.375rem; }
+::-webkit-scrollbar { width: 10px; background: #161616; border-radius: 6px;}
+::-webkit-scrollbar-thumb { background: #0f0f0f; border-radius: 6px; }
 ::-webkit-scrollbar-corner { background: transparent; }
+#up {
+  width: 50px;
+  height: 50px;
+  background-color: gray;
+  cursor: pointer;
+  bottom: 30px;
+  right: 20px;
+}
 
 #header {
   width: 100%;
-  height: 5rem;
+  height: 80px;
   font-size: var(--font-large);
-  padding: 1rem 1.5rem;
+  padding: 16px 24px;
   background: var(--body-light);
-  box-shadow: 0 0.25rem 0.5rem #333;
-  top: -4.5rem;
+  box-shadow: 0 4px 8px #333;
+  top: -68px;
   z-index: 1;
   transition: 0.5s;
 }
 
-#header.stay {
-  top: 0 !important;
+body.dark header#header {
+  background: var(--body-dark);
+  box-shadow: 0 4px 8px #000;
+}
+
+#header.stay { top: 0 !important; transition: 1s; }
+#banner { align-items: center; height: 100%; }
+
+#version {
+  font-size: 16px;
+  position: relative;
+  top: -14px;
+  left: 96px;
   transition: 1s;
 }
 
-header#header>#banner { align-items: center; height: 100%; }
-
-body.dark header#header {
-  background: var(--body-dark);
-  box-shadow: 0 0.25rem 0.5rem #000;
-}
-
-#version {
-  font-size: 1rem;
-  position: relative;
-  top: -0.875rem;
-  left: 6rem;
-}
-
-#header:not(.stay)>#version { display: none; }
-
-#game {
-  z-index: -1;
-}
+#header:not(.stay)>#version { opacity: 0; transition: 0.5s; }
 
 img#logo[src] {
-  width: 3rem;
-  height: 3rem;
-  margin-right: 1rem;
+  width: 48px;
+  height: 48px;
+  margin-right: 16px;
 }
+
+.flex { display: flex !important; }
+.iflex { display: inline-flex !important; }
+.grid { display: grid !important; }
+.igrid { display: inline-grid !important; }
+
+.fixed { position: fixed; }
+.sticky { position: sticky; }
+.absolute { position: absolute; }
+
+.no-border { border: none; }
+.circle { border-radius: 50%; }
+[hidden], .hidden { display: none !important; }
