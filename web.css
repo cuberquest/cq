@@ -12,7 +12,7 @@ html:root {
   scroll-behavior: smooth;
 
   --body-dark: #222;
-  --body-light: #fff;
+  --body-light: #d6d6d6;
   --text-dark: #fff;
   --text-light: black;
   --font-sm: 12.8px;
@@ -51,7 +51,7 @@ body.dark {
   font-size: var(--font-large);
   padding: 16px 24px;
   background: var(--body-light);
-  box-shadow: 0 4px 8px #333;
+  box-shadow: 0 4px 8px #808080;
   top: -68px;
   z-index: 1;
   transition: 0.5s;
